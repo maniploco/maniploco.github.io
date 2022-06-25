@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Learning a Unified Policy for Whole-Body Control of Manipulation and Locomotion">
+  <meta name="keywords" content="Locomotion, Mobile Manipulation, Reinforcement Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning a Unified Policy for Whole-Body Control of Manipulation and Locomotion</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Learning a Unified Policy for Whole-Body Control of <br /> Manipulation and Locomotion</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymous Authors
+            </span><br />
+            <span class="author-block">
+                Paper ID: 127
+            </span>
+          </div>
+
+          <!-- <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="./resources/CoRL-Energy-Locomotion.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#method_video"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered">
+      <div class="column is-9">
+        <video autoplay muted loop playsinline height="100%" src="./resources/teaser.mp4"></video>
+        <h2 class="subtitle has-text-centered">
+          Walking, trotting and bouncing (galloping) gaits in real world emerge from learning fully in simulation by minimizing the energy consumption <strong>without any human priors about gaits</strong>. 
+        </h2>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <!-- Paper video. -->
+  <div class="container">
+    <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center;">Project Video</h2>
+          <tr>
+            <td>
+              <br>
+                <div class="columns is-centered has-text-centered v-divider">
+                  <video controls src="./resources/supplementary_video.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 80%;"></video>
+                </div>
+            </td>
+          </tr>
+        </div> 
+    </div>
+  <!-- <div id="method_video" class="columns is-centered has-text-centered">
+    <div class="column is-two-thirds">
+      <h2 class="title is-2">Project Video</h2>
+      <div class="publication-video">
+        <video autoplay loop muted playsinline src="./resources/supplementary_video.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 40%;"></video>
+      </div>
+    </div>
+  </div> -->
+  <!--/ Paper video. -->
+  <br/>
+  <br/>
+
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            An attached arm can significantly increase the applicability of legged robots to several mobile manipulation tasks that are not possible for the wheeled or tracked counterparts. The standard learning paradigm for such legged manipulators is to decouple the problem into that of manipulation and locomotion. However, this is ineffective and requires immense engineering to support coordination between arm and legs, error can propagate across modules, and causes non-smooth unnatural motions. This is also biological implausible where there is evidence for strong motor synergies across limbs. In this work, we propose to learn a unified whole-body control for a legged manipulator using reinforcement learning. We follow advantage mixing using the causal dependency in the action space to get around the local minima and difficulty in training the joint system. We also propose a simple design for a low-cost legged manipulator and find that our unified policy can demonstrate dynamic and agile behaviors across several task setups.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+              <h2 class="title is-2" style="text-align: center;">Whole-Body Control</h2>
+              <tr>
+                <td>
+                  <br>
+                    <div class="columns is-centered has-text-centered v-divider">
+                      <video autoplay loop muted playsinline src="./resources/tele/whole-1.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                      &nbsp;
+                      <video autoplay loop muted playsinline src="./resources/tele/whole-2.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                    </div>
+                </td>
+              </tr>
+            </div> 
+        </div>
+    
+  <div class="container">
+    <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center;">Teleoperation</h2>
+          <tr>
+            <td>
+              <br>
+                <div class="columns is-centered has-text-centered v-divider">
+                  <video autoplay loop muted playsinline src="./resources/tele/place.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                  &nbsp;
+                  <video autoplay loop muted playsinline src="./resources/tele/garbage.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                </div>
+                <br />              
+                <div class="columns is-centered has-text-centered v-divider">
+                  <video autoplay loop muted playsinline src="./resources/tele/bush.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                  &nbsp;
+                  <video autoplay loop muted playsinline src="./resources/tele/door.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                </div>
+            </td>
+          </tr>
+        </div> 
+    </div>
+    <br /> <br />
+
+    <!-- <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center;">Visual Tracking</h2>
+          <tr>
+            <td>
+              <br>
+                <div class="columns is-centered has-text-centered v-divider">
+                  <video autoplay loop muted playsinline src="./resources/visual-tracking/Hard-ours-lowres.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 24%;"></video>
+                  &nbsp;
+                  <video autoplay loop muted playsinline src="./resources/visual-tracking/Easy-ours-1-lowres.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 24%;"></video>
+                  &nbsp;
+                  <video autoplay loop muted playsinline src="./resources/visual-tracking/Easy-ours-2-lowres.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 24%;"></video>
+                  &nbsp;
+                  <video autoplay loop muted playsinline src="./resources/visual-tracking/Easy-ours-3-lowres.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 24%;"></video>
+                </div>
+                <br />              
+                <div class="columns is-centered has-text-centered v-divider">
+                    <video autoplay loop muted playsinline src="./resources/visual-tracking/Hard-mpc-lowres.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 24%;"></video>
+                    &nbsp;
+                    <video autoplay loop muted playsinline src="./resources/visual-tracking/Easy-mpc-1-lowres.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 24%;"></video>
+                    &nbsp;
+                    <video autoplay loop muted playsinline src="./resources/visual-tracking/Easy-mpc-2-lowres.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 24%;"></video>
+                    &nbsp;
+                    <video autoplay loop muted playsinline src="./resources/visual-tracking/Easy-mpc-3-lowres.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 24%;"></video>
+                  </div>
+            </td>
+          </tr>
+        </div> 
+    </div> -->
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center;">Visual Tracking</h2>
+        <tr>
+            <td>
+              <br>
+              <div class="columns is-centered has-text-centered">
+                <video autoplay loop muted playsinline src="./resources/visual-tracking/human-tracking.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                &nbsp;
+                <video autoplay loop muted playsinline src="./resources/visual-tracking/tag-tracking.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+              </div>
+            </td>
+          </tr>
+        <tr>
+          <td>
+            <br>
+            <div class="columns is-centered has-text-centered">
+                <video autoplay loop muted playsinline src="./resources/visual-tracking/vis-easy.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                &nbsp;
+                <video autoplay loop muted playsinline src="./resources/visual-tracking/vis-hard.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+            </div>
+          </td>
+        </tr>
+        <!-- <tr>
+            <td>
+              <br>
+              <div class="columns is-centered has-text-centered">
+                <video autoplay loop muted playsinline src="./resources/visual-tracking/vis-easy.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 80%;"></video>
+              </div>
+            </td>
+          </tr> -->
+      </div> 
+    </div>
+
+    <br><br>
+    
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center;">Demonstration Replay</h2>
+          <tr>
+              <td>
+                <br>
+                <div class="columns is-centered has-text-centered">
+                  <video autoplay loop muted playsinline src="./resources/demo/demo.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                  &nbsp;
+                  <video autoplay loop muted playsinline src="./resources/demo/wiping.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                </div>
+              </td>
+            </tr>
+        </div> 
+      </div>
+
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center;">Similar Energy Consumption Trend<br \>between Our Robot and Horses</h2>
+        
+        <div class="is-vcentered interpolation-panel">
+          <div class="content has-text-centered">
+            <img style="border: 1px solid #bbb; border-radius: 10px; width: 36.75%;" src="./resources/horse.png">&nbsp;&nbsp;&nbsp;&nbsp;<img style="border: 1px solid #bbb; border-radius: 10px; width: 40%;" src="./resources/mpc_energy.png">
+          </div>
+          <div class="content has-text-centered">
+            <p>
+              In Biomechanics, Froude number is a metric characterizing gaits of quadrupeds and bipeds. Animals with a similar morphology but with different sizes tend to use the same gait when moving with equal Froude numbers. Our robot has similar Froude numbers as horses and sheep. The plot on the left <strong>(Hoyt et al. 1981)</strong> analyzes the energy consumption of different horse gaits across different speeds. Shown on the right, the energy consumption plot of our robot has a similar trend, which also validates certain gaits will emerge at certain speeds if we minimize the energy consumption. 
+            </p>
+          </div>
+        </div>
+        <br>
+        <div class="is-vcentered interpolation-panel">
+          <div class="content has-text-centered">
+            <video autoplay loop muted playsinline src="./resources/gait_comparison.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 80%;"></video>
+          </div>
+          <div class="content has-text-centered">
+            <p>
+              Foot Contact Plots of Walking, Trotting, Bouncing (Galloping)
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div> -->
+
+
+    <br><br>
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center;">More Examples of Emergent Structured Gaits <br> (Walk, Trot & Bounce)</h2>
+        <tr>
+          <td>
+            <br><h3 class="title is-4">Walking Gait (0.375 m/s): </h3><br>
+              <div class="columns is-centered has-text-centered">
+                <video autoplay loop muted playsinline src="./resources/walk_trench.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 33%;"></video>
+                &nbsp;
+                <video autoplay loop muted playsinline src="./resources/walk_payload.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 33%;"></video>
+                &nbsp;
+                <video autoplay loop muted playsinline src="./resources/walk_brush.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 33%;"></video>
+              </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <br><h3 class="title is-4">Trotting Gait (0.9 m/s): </h3><br>
+              <div class="columns is-centered has-text-centered">
+                <video autoplay loop muted playsinline src="./resources/trot_trench.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 33%;"></video>
+                &nbsp;
+                <video autoplay loop muted playsinline src="./resources/trot_payload.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 33%;"></video>
+                &nbsp;
+                <video autoplay loop muted playsinline src="./resources/trot_brush.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 33%;"></video>
+              </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <br><h3 class="title is-4">Bouncing (Galloping) Gait (1.5 m/s): </h3><br>
+              <div class="columns is-centered has-text-centered">
+                <video autoplay loop muted playsinline src="./resources/bounce_pull.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                &nbsp;
+                <video autoplay loop muted playsinline src="./resources/bounce_pull_slomo.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+              </div>
+              <br />
+              <div class="columns is-centered has-text-centered">
+                <video autoplay loop muted playsinline src="./resources/bounce_slomo.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                &nbsp;
+                <video autoplay loop muted playsinline src="./resources/bounce_trench.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+              </div>
+          </td>
+        </tr> -->
+        
+        <!-- <tr>
+          <td>
+            <br><h3 class="title is-4">Gait Transition via a Velocity-Conditioned Policy: </h3><br>
+              <div class="columns is-centered has-text-centered">
+                <video autoplay loop muted playsinline src="./resources/gait_transition.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 80%;"></video>
+              </div>
+          </td>
+        </tr> -->
+
+        <!-- <br/>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center;">Emergent Unstructured Gaits</h2>
+        <tr>
+          <td>
+            <br>
+              <div class="columns is-centered has-text-centered v-divider">
+                <video autoplay loop muted playsinline src="./resources/rocky.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                &nbsp;
+                <video autoplay loop muted playsinline src="./resources/plank.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+              </div>
+              <br />              
+              <div class="columns is-centered has-text-centered v-divider">
+                <video autoplay loop muted playsinline src="./resources/unstructured-indoor-1.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                &nbsp;
+                <video autoplay loop muted playsinline src="./resources/unstructured-indoor-2.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+              </div>
+          </td>
+        </tr>
+      </div> 
+    </div> -->
+
+    <br><br>
+  </div>
+</section>
+
+
+</body>
+</html>
