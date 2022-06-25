@@ -131,24 +131,42 @@
     <div class="container">
         <div class="columns is-centered">
             <div class="column is-full-width">
-              <h2 class="title is-2" style="text-align: center;">Whole-Body Control</h2>
+              <h2 class="title is-2" style="text-align: center;">Whole-Body Control: Synergistic Arm and Legs Coordination</h2>
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-two-thirds">
+                  <div class="content has-text-justified">
+                  <p>
+                  As the robot arm end-effector is commanded to reach a certain point, the unified policy adjusts rest of the body in synergistic coordination. For instance, legs bend to increase reach of the arm on the ground and legs raise if the end effector is commanded to reach higher.
+                  </p>
+                  </div>
+                </div>
+              </div>
               <tr>
                 <td>
                   <br>
                     <div class="columns is-centered has-text-centered v-divider">
-                      <video autoplay loop muted playsinline src="./resources/tele/whole-1.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                      <!-- <video autoplay loop muted playsinline src="./resources/tele/whole-1.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
                       &nbsp;
-                      <video autoplay loop muted playsinline src="./resources/tele/whole-2.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                      <video autoplay loop muted playsinline src="./resources/tele/whole-2.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video> -->
+                      <video autoplay loop muted playsinline src="./resources/tele/whole.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 50%;"></video>
+                      
                     </div>
                 </td>
               </tr>
             </div> 
         </div>
-    
+</section>
+
+<section class="section">
   <div class="container">
     <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title is-2" style="text-align: center;">Teleoperation</h2>
+          <p>
+            <center>
+              Only end-effector of arm is teleoperated, rest of the body joints (legs+arm) are controlled by the unified policy.
+            </center>
+          </p>
           <tr>
             <td>
               <br>
@@ -198,10 +216,22 @@
           </tr>
         </div> 
     </div> -->
+</section>
 
+<section class="section">
+  <div class="container">
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-2" style="text-align: center;">Visual Tracking</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <div class="content has-text-justified">
+            <p>
+              The robot is tasked to track the AR tag, and the unified policy automatically adjusts the whole body control needed to track the AR tag. For example, bending legs in coordination with arm to keep the camera near AR tag.
+            </p>
+            </div>
+          </div>
+        </div>
         <tr>
             <td>
               <br>
@@ -232,12 +262,24 @@
           </tr> -->
       </div> 
     </div>
+  </div>
+</section>
 
-    <br><br>
-    
+<section class="section">
+  <div class="container">
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title is-2" style="text-align: center;">Demonstration Replay</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-two-thirds">
+              <div class="content has-text-justified">
+              <p>
+                Here, we display the agility of our whole-body (arm+legs) controller by using demonstrations to perform the task.
+              </p>
+              </div>
+            </div>
+          </div>
+
           <tr>
               <td>
                 <br>
@@ -250,7 +292,7 @@
             </tr>
         </div> 
       </div>
-
+  </div>
     <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-2" style="text-align: center;">Similar Energy Consumption Trend<br \>between Our Robot and Horses</h2>
